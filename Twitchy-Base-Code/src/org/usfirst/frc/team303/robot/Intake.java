@@ -5,14 +5,15 @@ import com.ctre.CANTalon.TalonControlMode;
 
 public class Intake {
 
-	static CANTalon intake;
+	static CANTalon intake = new CANTalon(RobotMap.INTAKE);
+	
 	
 	public void Intake(){
-		intake = new CANTalon(RobotMap.INTAKE);
+		
+		intake.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
 	}
 	
 	public void IntakeInit(){
-		intake.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
 	}
 	
 	public void Control(double pos){

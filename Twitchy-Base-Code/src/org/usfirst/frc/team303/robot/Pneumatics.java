@@ -5,17 +5,15 @@ import edu.wpi.first.wpilibj.Solenoid;
 
 public class Pneumatics {
 
-	Compressor compressor = new Compressor();
-	Solenoid piston = new Solenoid(0);
-	Solenoid gearShift = new Solenoid(1);
-	
+	Compressor compressor = new Compressor(0);
+	Solenoid piston = new Solenoid(62, 0);
+	Solenoid gearShift = new Solenoid(62, 1);
 	
 	public Pneumatics() {
+		compressor.setClosedLoopControl(true);
 		
-	}
-	
-	public void pneumaticsInit() {
 		compressor.start();
+		
 	}
 	
 	public void ControlShot(boolean pistonS) {

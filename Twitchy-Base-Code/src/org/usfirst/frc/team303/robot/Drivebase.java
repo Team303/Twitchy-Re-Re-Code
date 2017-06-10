@@ -20,15 +20,16 @@ public class Drivebase {
 		FR = new CANTalon(RobotMap.FR);
 		BL = new CANTalon(RobotMap.BL);
 		BR = new CANTalon(RobotMap.BR);
-	}
-	
-	public void drivebaseInit() {
 		drivebase = new RobotDrive(FL, BL, FR, BR);
 		drivebase.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, RobotMap.FL_INV);
 		drivebase.setInvertedMotor(RobotDrive.MotorType.kFrontRight, RobotMap.FR_INV);
 		drivebase.setInvertedMotor(RobotDrive.MotorType.kRearLeft, RobotMap.BL_INV);
 		drivebase.setInvertedMotor(RobotDrive.MotorType.kRearRight, RobotMap.BR_INV);
 		drivebase.setSafetyEnabled(true);
+	}
+	
+	public void drivebaseInit() {
+		
 		
 	}
 	

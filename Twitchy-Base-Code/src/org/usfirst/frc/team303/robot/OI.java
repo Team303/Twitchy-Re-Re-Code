@@ -18,6 +18,8 @@ public class OI {
 	static double xlX = 0, xlY = 0, xrX = 0, xrY = 0;
 	static double xLeftTrigger=0, xRightTrigger=0;
 	
+	static int xPov = 0;
+	
 	static boolean[] lBtn = new boolean[9];
 	static boolean[] rBtn = new boolean[9];	
 	static boolean xBtnA, xBtnB, xBtnX, xBtnY, xLeftBumper, xRightBumper, xBtnStart, xBtnBack, xLeftStickBtn, xRightStickBtn;
@@ -49,6 +51,7 @@ public class OI {
 		xlY = xbox.getY(Hand.kLeft);
 		xrX = xbox.getX(Hand.kRight);
 		xrY = xbox.getY(Hand.kRight);
+		xPov = xbox.getPOV();
 		
 		xBtnA = xbox.getAButton();
 		SmartDashboard.putBoolean("a state", xBtnA);
